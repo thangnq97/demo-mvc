@@ -1,7 +1,11 @@
 <?php
-    class CategoryController {
-        public function all() {
-            
-        }
+
+namespace App\Controllers;
+class CategoryController
+{
+    public function index()
+    {
+        echo 'Danh sách category';
     }
+}
 ?>

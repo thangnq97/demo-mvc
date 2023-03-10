@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
-    class ProductController {
+use Illuminate\Database\Eloquent\Model;
+    class ProductController extends Model{
         public function addProduct(){
             echo 'Thêm mới sản phẩm';
         }

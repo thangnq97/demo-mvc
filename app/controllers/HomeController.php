@@ -6,7 +6,10 @@ class HomeController
 {
     public function index()
     {
-        $products = Product::all();
+        // $products = Product::all();
+        $products = Product::where('id', 2)->get();
+        // echo '<pre>';
+        // var_dump($products);die;
         include_once './app/views/homepage.php';
     }
 

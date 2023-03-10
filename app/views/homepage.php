@@ -14,6 +14,7 @@
             <th>ID</th>
             <th>NAME</th>
             <th>PRICE</th>
+            <th>DESC</th>
         </thead>
         <tbody>
             <?php foreach($products as $pro):?>
@@ -21,6 +22,7 @@
                     <td><?= $pro['id']?></td>
                     <td><?= $pro['name']?></td>
                     <td><?= $pro['price']?></td>
+                    <td><?= $pro['product_desc']?></td>
                 </tr>
             <?php endforeach?>    
         </tbody>

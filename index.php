@@ -3,6 +3,7 @@
     $url = isset($_GET['url']) ? $_GET['url'] : '/';
 
     require_once './vendor/autoload.php';
+    require_once './commons/database-config.php';
     
     use App\Controllers\HomeController;
     use App\Controllers\ProductController;
@@ -29,6 +30,18 @@
         case 'list-cate':
             $ctr = new CategoryController();
             echo $ctr->index();
+            break;
+        case 'add-data':
+            $ctr = new CategoryController();
+            echo $ctr->addData();
+            break;
+        case 'edit-data':
+            $ctr = new CategoryController();
+            echo $ctr->editData();
+            break;
+        case 'delete-data':
+            $ctr = new CategoryController();
+            echo $ctr->deleteData();
             break;
         default:
             echo 'Đường dẫn không tồn tại';

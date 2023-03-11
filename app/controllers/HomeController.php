@@ -2,15 +2,13 @@
 
 namespace App\Controllers;
 use App\Models\Product;
-class HomeController
+class HomeController extends BaseController
 {
     public function index()
     {
         $products = Product::all();
-        // $products = Product::where('id', 2)->get();
-        // echo '<pre>';
-        // var_dump($products);die;
-        include_once './app/views/homepage.php';
+
+        $this->render('homepage.index', ['listItem' => $products]);
     }
 
     public function detail()

@@ -13,58 +13,57 @@
     switch ($url) {
         case '/':
             $ctr = new HomeController();
-            echo $ctr->index();
+            $ctr->index();
             break;
         case 'detail':
             $ctr = new HomeController();
-            echo $ctr->detail();
+             $ctr->detail();
             break;
         case 'contact':
             $ctr = new HomeController();
-            echo $ctr->contact();
+             $ctr->contact();
             break;
         case 'add-product':
             $ctr = new ProductController();
-            echo $ctr->addProduct();
+             $ctr->addProduct();
             break;
         case 'list-cate':
             $ctr = new CategoryController();
-            echo $ctr->index();
+             $ctr->index();
             break;
         case 'add-data':
             $ctr = new CategoryController();
-            echo $ctr->addData();
+             $ctr->addData();
             break;
         case 'edit-data':
             $ctr = new CategoryController();
-            echo $ctr->editData();
+             $ctr->editData();
             break;
         case 'delete-data':
             $ctr = new CategoryController();
-            echo $ctr->deleteData();
+             $ctr->deleteData();
             break;
         case 'add-product':
             $ctr = new ProductController();
-            echo $ctr->addProduct();
+             $ctr->addProduct();
             break;
         case 'save-add-product':
             $ctr = new ProductController();
-            echo $ctr->saveAddProduct();
+             $ctr->saveAddProduct();
             break;
         case 'edit-product':
             $ctr = new ProductController();
-            echo $ctr->editProduct();
+             $ctr->editProduct();
             break;
         case 'save-edit-product':
             $ctr = new ProductController();
-            echo $ctr->saveEditProduct();
+             $ctr->saveEditProduct();
             break;
         case 'delete-product':
             $ctr = new ProductController();
-            echo $ctr->deleteProduct();
+             $ctr->deleteProduct();
             break;
         default:
             echo 'Đường dẫn không tồn tại';
             break;
     }
-?>

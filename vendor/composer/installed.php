@@ -3,7 +3,7 @@
         'name' => 'thangnq/mvc',
         'pretty_version' => 'dev-thangnq',
         'version' => 'dev-thangnq',
-        'reference' => '2538fe283fff82388deb686719a764117faefa6e',
+        'reference' => 'ced3f0afaf0ae41d08a7ace7591bb5929dbc754f',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -256,7 +256,7 @@
         'thangnq/mvc' => array(
             'pretty_version' => 'dev-thangnq',
             'version' => 'dev-thangnq',
-            'reference' => '2538fe283fff82388deb686719a764117faefa6e',
+            'reference' => 'ced3f0afaf0ae41d08a7ace7591bb5929dbc754f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

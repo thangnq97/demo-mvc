@@ -43,6 +43,26 @@
             $ctr = new CategoryController();
             echo $ctr->deleteData();
             break;
+        case 'add-product':
+            $ctr = new ProductController();
+            echo $ctr->addProduct();
+            break;
+        case 'save-add-product':
+            $ctr = new ProductController();
+            echo $ctr->saveAddProduct();
+            break;
+        case 'edit-product':
+            $ctr = new ProductController();
+            echo $ctr->editProduct();
+            break;
+        case 'save-edit-product':
+            $ctr = new ProductController();
+            echo $ctr->saveEditProduct();
+            break;
+        case 'delete-product':
+            $ctr = new ProductController();
+            echo $ctr->deleteProduct();
+            break;
         default:
             echo 'Đường dẫn không tồn tại';
             break;

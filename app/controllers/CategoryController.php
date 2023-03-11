@@ -11,12 +11,13 @@ class CategoryController
 
     public function addData() {
         $name = 'cate 3';
+
         $model = new Category();
         $model->name = $name;
         $model->save();
     }
 
-    public function editData(){
+    public function editData() {
         $id = 3;
         $name = 'cate 3';
 
@@ -27,6 +28,7 @@ class CategoryController
 
     public function deleteData() {
         $id = 3;
+        
         $model = new Category();
         $model->destroy($id);
     }

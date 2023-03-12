@@ -11,14 +11,16 @@
 </head>
 
 <body>
-    <a href="./add-product" class="btn btn-success">Add Product</a>
+    <h6><?php echo e($msg); ?></h6>
     <table class="table table-stripped">
         <thead>
             <th>ID</th>
             <th>NAME</th>
             <th>PRICE</th>
             <th>DESC</th>
-            <th>ACTION</th>
+            <th>
+             <a href="./add-product" class="btn btn-success">Add new</a>
+            </th>
         </thead>
         <tbody>
             <?php $__currentLoopData = $listItem; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $pro): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

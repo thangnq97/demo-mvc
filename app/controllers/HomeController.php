@@ -7,8 +7,9 @@ class HomeController extends BaseController
     public function index()
     {
         $products = Product::all();
-
-        $this->render('homepage.index', ['listItem' => $products]);
+        $msg = isset($_GET['msg']) ? $_GET['msg'] : null;
+        $this->render('homepage.index', ['listItem' => $products,
+                                         'msg' => $msg              ]);
     }
 
     public function detail()

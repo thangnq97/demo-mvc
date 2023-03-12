@@ -51,10 +51,21 @@ use Illuminate\Database\Eloquent\Model;
         
         public function deleteProduct() {
             $id = isset($_GET['id']) ? $_GET['id'] : null;
-            if($id) {
-                Product::destroy($id);
+            if(!$id) {
+                header('location: ./?msg=khong du thong tin de xoa');
+                die;
             }
-            header('location: ./');
+            $model = Product::find($id);
+            $msg = '';
+            if(!$model) {
+                $msg = 'id khong ton tai';
+            }
+            if($model){
+                Product::destroy($id);
+                $msg = 'da xoa thanh cong';
+                
+            }
+            header("location: ./?msg=$msg");
         }
     }
 ?>

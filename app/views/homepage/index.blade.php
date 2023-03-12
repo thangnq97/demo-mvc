@@ -18,6 +18,7 @@
             <th>NAME</th>
             <th>PRICE</th>
             <th>DESC</th>
+            <!-- <th>CATEGORY</th> -->
             <th>
              <a href="./add-product" class="btn btn-success">Add new</a>
             </th>

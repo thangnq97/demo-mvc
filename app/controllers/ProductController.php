@@ -2,25 +2,28 @@
 namespace App\Controllers;
 
 use App\Models\Product;
-use Illuminate\Database\Eloquent\Model;
-    class ProductController extends Model{
+use App\Models\Category;
+    class ProductController extends BaseController{
 
         public function addProduct() {
-            include_once './app/views/add-product.php';
+            $cates = Category::all();
+            $this->render('admin.add-product',  ['cates' => $cates]);
         }
 
         public function saveAddProduct(){
             if(isset($_POST['submit'])) {
-                $name = $_POST['name'];
-                $price = $_POST['price'];
-                $desc = $_POST['desc'];
+                $data = $_POST;
+                // $name = $_POST['name'];
+                // $price = $_POST['price'];
+                // $desc = $_POST['desc'];
 
-                $product = new Product();
-                $product->name = $name;
-                $product->price = $price;
-                $product->description = $desc;
-                $product->cate_id = 1;
-                $product->save();
+                $model = new Product();
+                // $product->name = $name;
+                // $product->price = $price;
+                // $product->description = $desc;
+                $model->fill($data);
+                // $model->cate_id = 1;
+                $model->save();
 
                 header('location: ./');
             }

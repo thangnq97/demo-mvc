@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +19,7 @@
             <th>NAME</th>
             <th>PRICE</th>
             <th>DESC</th>
+            <th>CATEGORY</th>
             <!-- <th>CATEGORY</th> -->
             <th>
              <a href="./add-product" class="btn btn-success">Add new</a>
@@ -31,6 +33,14 @@
                 <td><?php echo e($pro->price); ?></td>
                 <td><?php echo e($pro->description); ?></td>
                 <td>
+                    <?php $__currentLoopData = $cates; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cate): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <?php if($cate->id == $pro->cate_id): ?> 
+                            <?php echo e($cate->name); ?>
+
+                        <?php endif; ?>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                </td>
+                <td>
                     <a class="btn btn-primary" href="./edit-product?id=<?php echo e($pro->id); ?>">Edit</a>
                     <a class="btn btn-danger" onclick="return confirm('Are you sure')" href="./delete-product?id=<?php echo e($pro->id); ?>">Delete</a>
                 </td>
@@ -38,6 +48,10 @@
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </tbody>
     </table>
+    <script>
+        var $data = <?php echo json_encode($listItem); ?>;
+        console.log($data)
+    </script>
 </body>
 
 </html><?php /**PATH C:\xampp\htdocs\demo-mvc\app\views/homepage/index.blade.php ENDPATH**/ ?>

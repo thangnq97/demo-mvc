@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +19,7 @@
             <th>NAME</th>
             <th>PRICE</th>
             <th>DESC</th>
+            <th>CATEGORY</th>
             <!-- <th>CATEGORY</th> -->
             <th>
              <a href="./add-product" class="btn btn-success">Add new</a>
@@ -30,6 +32,13 @@
                 <td>{{$pro->name}}</td>
                 <td>{{$pro->price}}</td>
                 <td>{{$pro->description}}</td>
+                <td>
+                    @foreach($cates as $cate)
+                        @if($cate->id == $pro->cate_id) 
+                            {{$cate->name}}
+                        @endif
+                    @endforeach
+                </td>
                 <td>
                     <a class="btn btn-primary" href="./edit-product?id={{$pro->id}}">Edit</a>
                     <a class="btn btn-danger" onclick="return confirm('Are you sure')" href="./delete-product?id={{$pro->id}}">Delete</a>
